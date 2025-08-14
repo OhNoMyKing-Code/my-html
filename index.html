@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trang Web Riêng của Trọng Khanh</title>
+  <style>
+    body {
+      background: #121212;
+      color: #eee;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #1e1e1e;
+      padding: 20px;
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #61dafb;
+    }
+    main {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    button {
+      background: #61dafb;
+      border: none;
+      padding: 10px 20px;
+      color: #121212;
+      font-weight: 700;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #21a1f1;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #1e1e1e;
+      color: #999;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Trang Web Riêng của Trọng Khanh
+  </header>
+  <main>
+    <h2>Chào mừng mày đến với website của tui!</h2>
+    <p>Tui là Trọng Khanh, fan Real Madrid và chơi cờ cực chất. Muốn làm gì thì nói nhé!</p>
+    <button id="btnClick">Bấm đây để xem tin thú vị</button>
+    <p id="info" style="margin-top:20px; font-size:1.2rem;"></p>
+  </main>
+  <footer>
+    © 2025 Trọng Khanh | Fan Real Madrid | Đam mê cờ vua & bóng đá
+  </footer>
+
+  <script>
+    const btn = document.getElementById('btnClick');
+    const info = document.getElementById('info');
+    btn.addEventListener('click', () => {
+      const facts = [
+        "Real Madrid là CLB vĩ đại nhất hành tinh.",
+        "Stockfish là engine cờ vua đỉnh cao, nhưng tui vẫn bắn luôn!",
+        "Tui thích chơi FCM để đập hết đám ba que.",
+        "Chuyển nhượng mùa hè Real Madrid chuẩn bị bom tấn khủng lồ."
+      ];
+      const randomFact = facts[Math.floor(Math.random() * facts.length)];
+      info.textContent = randomFact;
+    });
+  </script>
+</body>
+</html>
